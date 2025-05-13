@@ -1,0 +1,48 @@
+/* Import our custom styles */
+@import './styles/base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply px-6 py-2 font-medium transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-red-600 text-white hover:bg-red-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-black text-white hover:bg-gray-800;
+  }
+}

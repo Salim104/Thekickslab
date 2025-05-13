@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "adidas Campus Core Black and White",
+      "image": "/src/assets/adidas Campus 00s-1.png",
+      "regularPrice": 1799.99,
+      "salePrice": 1529.99,
+      "discount": 15,
+      "brand": "adidas",
+      "category": "sneakers"
+    },
+    {
+      "id": 2,
+      "name": "ADIDAS YEEZY 700 V3 MONO SAFFLOWER",
+      "image": "/src/assets/adidas-adidas-yeezy-700-1.png",
+      "regularPrice": 1999.99,
+      "salePrice": 1599.99,
+      "discount": 30,
+      "brand": "adidas",
+      "category": "sneakers"
+    },
+    {
+      "id": 3,
+      "name": "AIR JORDAN 4 RETRO BLACK CAT",
+      "image": "/src/assets/jordan-air-jordan-4-retro-black-cat-2020-sneakers-1.png",
+      "regularPrice": 1899.99,
+      "salePrice": 1799.99,
+      "discount": 10,
+      "brand": "Jordan",
+      "category": "sneakers"
+    },
+    {
+      "id": 4,
+      "name": "Air Max Tailwind V x Skepta Chrome Red",
+      "image": "/src/assets/Air Max Tailwind V x Skepta(Chrome red)-1.png",
+      "regularPrice": 1899.99,
+      "salePrice": 1699.99,
+      "discount": 10,
+      "brand": "Nike",
+      "category": "sneakers"
+    },
+    {
+      "id": 5,
+      "name": "Air Max Tailwind V x Skepta Chrome Blue",
+      "image": "/src/assets/Air Max Tailwind V x Skepta(Chrome Blue)-1.png",
+      "regularPrice": 1999.99,
+      "salePrice": 1699.99,
+      "discount": 15,
+      "brand": "Nike",
+      "category": "sneakers"
+    },
+    {
+      "id": 6,
+      "name": "JORDAN 4 RETRO SB PINE GREEN",
+      "image": "/src/assets/nike-nike-sb-dunk-low-jarritos-sneakers-1.png",
+      "regularPrice": 1999.99,
+      "salePrice": 1799.99,
+      "discount": 10,
+      "brand": "Jordan",
+      "category": "sneakers"
+    },
+    {
+      "id": 7,
+      "name": "New Balance 327 Black & White",
+      "image": "/src/assets/new balance 327 black-1.png",
+      "regularPrice": 1699.99,
+      "salePrice": 1499.99,
+      "discount": 10,
+      "brand": "New Balance",
+      "category": "sneakers"
+    },
+    {
+      "id": 8,
+      "name": "NEW BALANCE 550 AiME LEON DORE WHITE GREY",
+      "image": "/src/assets/new-balance-new-balance-550-aime-leon-dore-white-grey-sneakers-1.png",
+      "regularPrice": 1899.99,
+      "salePrice": 1599.99,
+      "discount": 15,
+      "brand": "New Balance",
+      "category": "sneakers"
+    },
+    {
+      "id": 9,
+      "name": "NEW BALANCE 550 GS WHITE VINTAGE TEAL",
+      "image": "/src/assets/new-balance-new-balance-550-gs-white-vintage-teal-streetwear-1.png",
+      "regularPrice": 1899.99,
+      "salePrice": 1699.99,
+      "discount": 10,
+      "brand": "New Balance",
+      "category": "sneakers"
+    },
+    {
+      "id": 10,
+      "name": "NEW BALANCE 550 WHITE GREY",
+      "image": "/src/assets/new-balance-new-balance-550-white-grey-sneakers-1.png",
+      "regularPrice": 1999.99,
+      "salePrice": 1899.99,
+      "discount": 5,
+      "brand": "New Balance",
+      "category": "sneakers"
+    },
+    {
+      "id": 11,
+      "name": "NEW BALANCE 550 WHITE RED",
+      "image": "/src/assets/new-balance-new-balance-550-white-red-sneakers-1.png",
+      "regularPrice": 1999.99,
+      "salePrice": 1899.99,
+      "discount": 5,
+      "brand": "New Balance",
+      "category": "sneakers"
+    },
+    {
+      "id": 12,
+      "name": "NEW BALANCE 990 GREY",
+      "image": "/src/assets/nike-nike-dunk-low-grey-fog-sneakers.png",
+      "regularPrice": 1899.99,
+      "salePrice": 1699.99,
+      "discount": 10,
+      "brand": "New Balance",
+      "category": "sneakers"
+    }
+  ]
+}
