@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import adidasCampus from '../assets/adidas Campus 00s-1.png';
 import adidasYeezy from '../assets/adidas-adidas-yeezy-700-1.png';
 import nikeUptempo from '../assets/nike-nike-air-more-uptempo-black-white-2016-2020-sneakers-1.png';
@@ -96,6 +97,7 @@ const ShopAll = () => {
               key={product.id} 
               className="group relative bg-white transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
+              <Link to={`/product/${product.id}`}>
               {/* Discount Badge */}
               <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 z-10">
                 -{product.discountPercentage}%
@@ -120,6 +122,7 @@ const ShopAll = () => {
                   <span className="text-black font-semibold text-sm">{product.discountedPrice}</span>
                 </div>
               </div>
+              </Link>
             </div>
           ))}
         </div>

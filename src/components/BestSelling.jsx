@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import jordanLowWolf from '../assets/nike-nike-dunk-low-grey-fog-sneakers.png';
 import airJordan4 from '../assets/jordan-air-jordan-4-retro-black-cat-2020-sneakers-1.png';
 import nikeDunkRed from '../assets/nike-nike-dunk-low-team-red-2022-sneakers-1.png';
@@ -52,6 +53,7 @@ const BestSelling = () => {
               key={product.id} 
               className="group relative bg-white transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
+              <Link to={`/product/${product.id}`}>
               {/* Badge */}
               <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 z-10">
                 {product.badge}
@@ -76,6 +78,7 @@ const BestSelling = () => {
                   <span className="text-black font-semibold text-sm">{product.discountedPrice}</span>
                 </div>
               </div>
+              </Link>
             </div>
           ))}
         </div>

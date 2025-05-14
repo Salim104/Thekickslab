@@ -26,7 +26,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-8 bg-white border-b border-gray-200">
+    <section className="py-8 bg-white  border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-around items-center">
           {features.map((feature) => (

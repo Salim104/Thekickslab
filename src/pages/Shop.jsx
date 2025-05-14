@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import searchIcon from '../assets/icons-images/search.svg';
 
 // Importing product images - these will eventually come from a data file
@@ -227,6 +228,7 @@ const Shop = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <div key={product.id} className="group relative">
+                <Link to={`/product/${product.id}`}>
                 {/* Discount badge */}
                 <div className="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 z-10">
                   -{product.discount}%
@@ -249,6 +251,7 @@ const Shop = () => {
                     <span className="text-black font-bold">R{product.salePrice.toFixed(2)}</span>
                   </div>
                 </div>
+                </Link>
               </div>
             ))}
           </div>

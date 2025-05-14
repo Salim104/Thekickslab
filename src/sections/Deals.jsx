@@ -4,8 +4,8 @@ import dealsImage from '../assets/deals-image.png';
 
 const Deals = () => {
   return (
-    <section className="py-12 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="bg-black">
+      <div className="container mx-auto ">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-white mb-8 md:mb-0 md:w-1/2">
             <h2 className="text-5xl font-bold mb-4">30% <span className="text-red-600">OFF</span></h2>
