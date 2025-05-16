@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import productsData from '../data/products.json';
+import { useCart } from '../features/cart/CartContext';
+import { useWishlist } from '../features/wishlist/WishlistContext';
 
 // Import icons as needed
 import { FaHeart, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -12,6 +14,8 @@ const ProductDetail = () => {
   const [mainImage, setMainImage] = useState(0);
   const [activeTab, setActiveTab] = useState('description');
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const { addItem } = useCart();
+  const { addToWishlist, isInWishlist } = useWishlist();
 
   useEffect(() => {
     // Find the product by ID
@@ -183,18 +187,30 @@ const ProductDetail = () => {
 
           {/* Action Buttons */}
           <div className="space-y-4 mb-8">
-            <button className="w-full bg-black text-white py-3 px-6 hover:bg-gray-800 transition duration-300">
+            <button 
+              onClick={() => {
+                const productToAdd = {
+                  ...product,
+                  quantity: quantity
+                };
+                addItem(productToAdd);
+              }} 
+              className="w-full bg-black text-white py-3 px-6 hover:bg-gray-800 transition duration-300"
+            >
               ADD TO CART
             </button>
             
-            <button className="flex items-center justify-center space-x-2 w-full border border-gray-300 py-3 px-6 hover:bg-gray-50 transition duration-300">
-              <FaHeart className="text-gray-500" />
-              <span>Add to Wishlist</span>
+            <button 
+              onClick={() => addToWishlist(product)}
+              className="flex items-center justify-center space-x-2 w-full border border-gray-300 py-3 px-6 hover:bg-gray-50 transition duration-300"
+            >
+              <FaHeart className="text-red-600" />
+              <span>{isInWishlist(product.id) ? 'Remove from Wishlist' : 'Add to Wishlist'}</span>
             </button>
             
-            <button className="w-full border border-gray-300 py-3 px-6 hover:bg-gray-50 transition duration-300">
+            <Link to="/shop" className="block text-center w-full border border-gray-300 py-3 px-6 hover:bg-gray-50 transition duration-300">
               Continue Shopping
-            </button>
+            </Link>
           </div>
 
           {/* Categories */}

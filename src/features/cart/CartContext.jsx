@@ -28,7 +28,7 @@ const cartReducer = (state, action) => {
           ...state,
           items: updatedItems,
           totalItems: state.totalItems + 1,
-          totalAmount: state.totalAmount + action.payload.price
+          totalAmount: state.totalAmount + action.payload.salePrice
         };
       } else {
         // Add new item
@@ -36,7 +36,7 @@ const cartReducer = (state, action) => {
           ...state,
           items: [...state.items, { ...action.payload, quantity: 1 }],
           totalItems: state.totalItems + 1,
-          totalAmount: state.totalAmount + action.payload.price
+          totalAmount: state.totalAmount + action.payload.salePrice
         };
       }
     }
@@ -52,7 +52,7 @@ const cartReducer = (state, action) => {
           ...state,
           items: state.items.filter(item => item.id !== action.payload),
           totalItems: state.totalItems - 1,
-          totalAmount: state.totalAmount - existingItem.price
+          totalAmount: state.totalAmount - existingItem.salePrice
         };
       } else {
         // Decrease quantity
@@ -64,7 +64,7 @@ const cartReducer = (state, action) => {
               : item
           ),
           totalItems: state.totalItems - 1,
-          totalAmount: state.totalAmount - existingItem.price
+          totalAmount: state.totalAmount - existingItem.salePrice
         };
       }
     }

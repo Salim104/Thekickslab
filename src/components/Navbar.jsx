@@ -5,9 +5,11 @@ import searchIcon from '../assets/icons-images/search.svg';
 import favoriteIcon from '../assets/icons-images/favorite.svg';
 import profileIcon from '../assets/icons-images/profile.svg';
 import { useCart } from '../features/cart/CartContext.jsx';
+import { useWishlist } from '../features/wishlist/WishlistContext.jsx';
 
-const Navbar = ({ onCartClick }) => {
+const Navbar = ({ onCartClick, onWishlistClick }) => {
   const { totalItems } = useCart();
+  const { totalItems: wishlistItems } = useWishlist();
   return (
     <header className="py-2 px-6 flex justify-between items-center bg-white">
       <div className="flex items-center">
@@ -25,8 +27,13 @@ const Navbar = ({ onCartClick }) => {
           <button className="p-1">
             <img src={searchIcon} alt="Search" className="h-5 w-5" />
           </button>
-          <button className="p-1 relative">
+          <button className="p-1 relative" onClick={onWishlistClick}>
             <img src={favoriteIcon} alt="Favorites" className="h-5 w-5" />
+            {wishlistItems > 0 && (
+              <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                {wishlistItems}
+              </span>
+            )}
           </button>
           <button className="p-1">
             <img src={profileIcon} alt="Profile" className="h-5 w-5" />

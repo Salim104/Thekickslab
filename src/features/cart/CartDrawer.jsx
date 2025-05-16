@@ -47,7 +47,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                     <h3 className="text-sm font-medium">{item.name}</h3>
                     <div className="flex items-center mt-1">
                       <span className="text-gray-600 text-sm">{item.quantity} × </span>
-                      <span className="text-red-600 font-bold ml-1">R{item.price.toFixed(2)}</span>
+                      <span className="text-red-600 font-bold ml-1">R{item.salePrice.toFixed(2)}</span>
                     </div>
                   </div>
                   <button 
